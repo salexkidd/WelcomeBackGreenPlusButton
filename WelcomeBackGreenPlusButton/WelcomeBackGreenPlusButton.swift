@@ -1,4 +1,4 @@
-//  WelcomeBackPlusButton
+//  WelcomeBackGreenPlusButton
 //
 //  Created by salexkidd on /8/31/2018.
 //  Copyright © 2018 salexkidd. All rights reserved.
@@ -10,7 +10,7 @@ let pluginName: String = "WelcomBackGreenPlusButton"
 
 public var plugin: WBGPBWelcomeBackGreenPlusButton!
 
-public var APP_BLACKLIST: [String] = []
+public var APP_BLACKLIST: [String] = ["com.apple.notificationcenterui"]
 
 public var CLS_BLACKLIST = ["NSStatusBarWindow"]
 
@@ -58,6 +58,10 @@ public class WBGPBWelcomeBackGreenPlusButton: RuntimeHandler
 
         if APP_BLACKLIST.contains(WBPBBundleIdentifier) { return }
         
+        for window in NSApp.windows {
+            if CLS_BLACKLIST.contains(window.className) { return }
+        }
+        
         WBGPBMyKeyWindow = NSApp.mainWindow
 
         for notificationName in WBGPBWindowNotificationList
@@ -76,21 +80,29 @@ public class WBGPBWelcomeBackGreenPlusButton: RuntimeHandler
 
 extension NSWindow
 {
-    func _allowsFullScreen()      -> Bool { return true  }
+    func _allowsFullScreen() -> Bool {
+        return true
+    }
 
-    func canEnterFullScreenMode() -> Bool { return true  }
+    func canEnterFullScreenMode()   -> Bool {
+        return true
+    }
 
-    func showsFullScreenButton()  -> Bool { return false }
+    func _canEnterTileMode()        -> Bool {
+        return false
+    }
 
-    func _canEnterTileMode()      -> Bool { return false }
+    func _allowedInDashboardSpaceWithCollectionBehavior(arg1: CUnsignedLongLong) -> Bool {
+        return true
+    }
 
-    func _allowedInDashboardSpaceWithCollectionBehavior(arg1: CUnsignedLongLong)           -> Bool { return true }
-
-    func _allowedInOtherAppsFullScreenSpaceWithCollectionBehavior(arg1: CUnsignedLongLong) -> Bool { return true }
+    func _allowedInOtherAppsFullScreenSpaceWithCollectionBehavior(arg1: CUnsignedLongLong) -> Bool {
+        return true
+    }
     
-    @objc private func _WBPBGoFullScreen() { self.toggleFullScreen(self) }
+    @objc private func WBGPBGoFullScreen() { self.toggleFullScreen(self) }
     
-    @objc private func _WBPBGoFillScreen()
+    @objc private func WBGPBGoFillScreen()
     {
         if self.styleMask.contains(NSWindowStyleMask.fullScreen) {
             self.toggleFullScreen(self)
@@ -109,7 +121,6 @@ extension NSWindow
                 if let cachedValue: NSValue = objc_getAssociatedObject(self, WBGPBCachedFramePointer) as? NSValue {
                     let cachedFrame = NSRectToCGRect(cachedValue.rectValue)
                     self.setFrame(cachedFrame, display: false)
-
                 }
             }
         }
@@ -118,12 +129,11 @@ extension NSWindow
     func _zoomButtonIsFullScreenButton() -> Bool
     {
         let pressedOptKey = NSEvent.modifierFlags().contains([NSEvent.ModifierFlags.option])
-        
         if pressedOptKey {
-            self.standardWindowButton(NSWindowButton.zoomButton)?.action = #selector(NSWindow._WBPBGoFullScreen)
+            self.standardWindowButton(NSWindowButton.zoomButton)?.action = #selector(NSWindow.WBGPBGoFullScreen)
             self.standardWindowButton(NSWindowButton.zoomButton)?.alphaValue = 0.5
         } else {
-            self.standardWindowButton(NSWindowButton.zoomButton)?.action = #selector(NSWindow._WBPBGoFillScreen)
+            self.standardWindowButton(NSWindowButton.zoomButton)?.action = #selector(NSWindow.WBGPBGoFillScreen)
             self.standardWindowButton(NSWindowButton.zoomButton)?.alphaValue = 1.0
 
         }

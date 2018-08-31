@@ -10,17 +10,21 @@
 		5780A533213930BB00531A5C /* WelcomeBackGreenPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780A532213930BB00531A5C /* WelcomeBackGreenPlusButton.swift */; };
 		5790FE5621384A4E005EC9AF /* RuntimeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5790FE5521384A4E005EC9AF /* RuntimeHandler.m */; };
 		57AA79342138501100B2186A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AA79332138501100B2186A /* AppKit.framework */; };
+		57EEF412213934240070146F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 57EEF411213934240070146F /* README.md */; };
+		57EEF414213934490070146F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 57EEF413213934490070146F /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5780A532213930BB00531A5C /* WelcomeBackGreenPlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeBackGreenPlusButton.swift; sourceTree = "<group>"; };
-		5790FE442138401E005EC9AF /* WelcomeBackPlusButton.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelcomeBackPlusButton.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5790FE442138401E005EC9AF /* WelcomeBackGreenPlusButton.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelcomeBackGreenPlusButton.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5790FE472138401E005EC9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5790FE4D21384075005EC9AF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		5790FE5421384A4E005EC9AF /* RuntimeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeHandler.h; sourceTree = "<group>"; };
 		5790FE5521384A4E005EC9AF /* RuntimeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeHandler.m; sourceTree = "<group>"; };
 		57AA79332138501100B2186A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		57B4A45D21390F2500AF2010 /* NSWindow+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindow+Private.h"; sourceTree = "<group>"; };
+		57EEF411213934240070146F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		57EEF413213934490070146F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				5790FE472138401E005EC9AF /* Info.plist */,
+				57EEF411213934240070146F /* README.md */,
+				57EEF413213934490070146F /* LICENSE */,
 				5790FE4D21384075005EC9AF /* Bridging-Header.h */,
 				5790FE5321384A3F005EC9AF /* RuntimeHandler */,
 				5780A531213930AE00531A5C /* WelcomeBackGreenPlusButton */,
@@ -59,7 +65,7 @@
 		5790FE452138401E005EC9AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5790FE442138401E005EC9AF /* WelcomeBackPlusButton.bundle */,
+				5790FE442138401E005EC9AF /* WelcomeBackGreenPlusButton.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5790FE432138401E005EC9AF /* WelcomeBackPlusButton */ = {
+		5790FE432138401E005EC9AF /* WelcomeBackGreenPlusButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5790FE4A2138401E005EC9AF /* Build configuration list for PBXNativeTarget "WelcomeBackPlusButton" */;
+			buildConfigurationList = 5790FE4A2138401E005EC9AF /* Build configuration list for PBXNativeTarget "WelcomeBackGreenPlusButton" */;
 			buildPhases = (
 				5790FE402138401E005EC9AF /* Sources */,
 				5790FE412138401E005EC9AF /* Frameworks */,
@@ -96,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = WelcomeBackPlusButton;
+			name = WelcomeBackGreenPlusButton;
 			productName = WelcomeBackPlusButton;
-			productReference = 5790FE442138401E005EC9AF /* WelcomeBackPlusButton.bundle */;
+			productReference = 5790FE442138401E005EC9AF /* WelcomeBackGreenPlusButton.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -128,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5790FE432138401E005EC9AF /* WelcomeBackPlusButton */,
+				5790FE432138401E005EC9AF /* WelcomeBackGreenPlusButton */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +144,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EEF414213934490070146F /* LICENSE in Resources */,
+				57EEF412213934240070146F /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5790FE4A2138401E005EC9AF /* Build configuration list for PBXNativeTarget "WelcomeBackPlusButton" */ = {
+		5790FE4A2138401E005EC9AF /* Build configuration list for PBXNativeTarget "WelcomeBackGreenPlusButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5790FE4B2138401E005EC9AF /* Debug */,

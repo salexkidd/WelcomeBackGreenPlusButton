@@ -1,8 +1,7 @@
-Welcomeback PlusButton
+Welcomeback Green Plus Button
 ==============================================================================
 
-I don't like Full screen green button.
-Original green plus button come baaaaaaaaaack!
+I hate full screen green button behavior! Original green plus button come back!
 
 
 information:
@@ -12,7 +11,8 @@ information:
 - SIMBL plugin to improve the functionallity of the green maximize button on OS X
   - Respect [FullScreenER](https://github.com/w0lfschild/fullscreenER) created by [w0lfschild](https://github.com/w0lfschild)-san!
   - Rewritten in Swift.
-- Author: salexkidd
+- Author: salexkidd (Basic Idea: w0lfschild)
+
 
 
 Notes:
@@ -25,10 +25,11 @@ Notes:
   - Pressing while in fullscreen exits fullscreen
 
 
+
 Installation:
 ------------------------------------------------------------------------------
 - Download [mySIMBL](https://github.com/w0lfschild/mySIMBL)
-- Download [Welcomeback PlusButton]()
+- Download [Welcomeback GreenPlusButton]()
 - Open WelcomeBackPlusButton.bundle with mySIMBL.app
 - Restart your favorite application.
 - mouseover to your favorite application's green button.
