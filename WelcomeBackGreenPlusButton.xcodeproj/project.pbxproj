@@ -10,6 +10,7 @@
 		5780A533213930BB00531A5C /* WelcomeBackGreenPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780A532213930BB00531A5C /* WelcomeBackGreenPlusButton.swift */; };
 		5790FE5621384A4E005EC9AF /* RuntimeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5790FE5521384A4E005EC9AF /* RuntimeHandler.m */; };
 		57AA79342138501100B2186A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AA79332138501100B2186A /* AppKit.framework */; };
+		57E66DF02139AE0D002F6A9A /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 57E66DEF2139AE0D002F6A9A /* icons.icns */; };
 		57EEF412213934240070146F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 57EEF411213934240070146F /* README.md */; };
 		57EEF414213934490070146F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 57EEF413213934490070146F /* LICENSE */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		5790FE5521384A4E005EC9AF /* RuntimeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeHandler.m; sourceTree = "<group>"; };
 		57AA79332138501100B2186A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		57B4A45D21390F2500AF2010 /* NSWindow+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindow+Private.h"; sourceTree = "<group>"; };
+		57E66DEF2139AE0D002F6A9A /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
 		57EEF411213934240070146F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		57EEF413213934490070146F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +53,7 @@
 		5790FE3B2138401E005EC9AF = {
 			isa = PBXGroup;
 			children = (
+				57E66DEC2139A5C7002F6A9A /* Resources */,
 				5790FE472138401E005EC9AF /* Info.plist */,
 				57EEF411213934240070146F /* README.md */,
 				57EEF413213934490070146F /* LICENSE */,
@@ -85,6 +88,14 @@
 				57AA79332138501100B2186A /* AppKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57E66DEC2139A5C7002F6A9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57E66DEF2139AE0D002F6A9A /* icons.icns */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E66DF02139AE0D002F6A9A /* icons.icns in Resources */,
 				57EEF414213934490070146F /* LICENSE in Resources */,
 				57EEF412213934240070146F /* README.md in Resources */,
 			);
