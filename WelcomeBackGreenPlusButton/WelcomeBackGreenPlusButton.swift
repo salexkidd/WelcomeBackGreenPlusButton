@@ -10,7 +10,11 @@ let pluginName: String = "WelcomBackGreenPlusButton"
 
 public var plugin: WBGPBWelcomeBackGreenPlusButton!
 
-public var APP_BLACKLIST: [String] = ["com.apple.notificationcenterui"]
+public var APP_BLACKLIST: [String] = [
+    "com.apple.notificationcenterui",
+    "com.apple.dock",
+    
+]
 
 public var CLS_BLACKLIST = ["NSStatusBarWindow"]
 
@@ -80,18 +84,11 @@ public class WBGPBWelcomeBackGreenPlusButton: RuntimeHandler
 
 extension NSWindow
 {
-    func _allowsFullScreen() -> Bool {
-        return true
-    }
-
-    func canEnterFullScreenMode()   -> Bool {
-        return true
-    }
-
-    func _canEnterTileMode()        -> Bool {
-        return false
-    }
-
+    func _allowsFullScreen()        -> Bool { return true }
+    func canEnterFullScreenMode()   -> Bool { return true }
+    func _canEnterTileMode()        -> Bool { return false }
+    func showsFullScreenButton()    -> Bool { return false }
+    
     func _allowedInDashboardSpaceWithCollectionBehavior(arg1: CUnsignedLongLong) -> Bool {
         return true
     }
